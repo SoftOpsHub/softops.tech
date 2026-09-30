@@ -1,0 +1,56 @@
+name: Deploy
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/check.mjs
+
+  deploy:
+    if: github.event_name != 'pull_request'
+    needs: check
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Stage the public files only
+        run: |
+          mkdir _site
+          cp -R index.html 404.html CNAME robots.txt sitemap.xml assets _site/
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+      - id: deployment
+        uses: actions/deploy-pages@v4
+      - name: Smoke-test the live site
+        run: |
+          sleep 20
+          for path in / /assets/css/site.css /assets/js/site.js /assets/img/og.png; do
+            code=$(curl -s -o /dev/null -w '%{http_code}' "https://softops.tech$path")
+            echo "$path → $code"
+            [ "$code" = "200" ] || exit 1
+          done

@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>SoftOps — From design to deployment, and everything after</title>
+<meta name="description" content="SoftOps is a software engineering company for mobile, backend, applied AI and cloud. We work as the whole engineering function for a small number of ambitious companies — and we own the outcome.">
+<link rel="canonical" href="https://softops.tech/">
+<meta name="theme-color" content="#0b0b0c" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#f7f7f5" media="(prefers-color-scheme: light)">
+<meta name="color-scheme" content="dark light">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://softops.tech/">
+<meta property="og:title" content="SoftOps — From design to deployment, and everything after">
+<meta property="og:description" content="The whole engineering function for ambitious companies: mobile, backend, applied AI and cloud. Proven, not promised.">
+<meta property="og:image" content="https://softops.tech/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
+<link rel="preload" href="/assets/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/css/site.css">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "SoftOps",
+  "url": "https://softops.tech",
+  "logo": "https://softops.tech/assets/img/apple-touch-icon.png",
+  "foundingDate": "2022",
+  "email": "info@softopshub.com",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Marina Tower, Overseas Enclave, Bahria Town",
+    "addressLocality": "Lahore",
+    "addressCountry": "PK"
+  },
+  "sameAs": ["https://www.linkedin.com/company/softopshub"]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <defs>
+    <symbol id="mark" viewBox="0 0 178 204">
+      <path d="M64 0H140C162 0 178 18 178 42H76L49 63V88L86 126H36L0 90V62Z"/>
+      <path d="M114 204H38C16 204 0 186 0 162H102L129 141V116L92 78H142L178 114V142Z"/>
+    </symbol>
+  </defs>
+</svg>
+
+<header class="nav" id="top">
+  <div class="wrap nav__in">
+    <a class="brand" href="#top" aria-label="SoftOps — back to top">
+      <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <span>SoftOps</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#work">Work</a>
+      <a href="#capabilities">Capabilities</a>
+      <a href="#method">Method</a>
+      <a href="#company">Company</a>
+    </nav>
+    <a class="btn btn--sm" href="#contact">Start a project</a>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="wrap hero__in">
+      <div class="hero__copy">
+        <p class="eyebrow"><span class="dot" aria-hidden="true"></span>Software engineering · Mobile · Backend · AI · Cloud</p>
+        <h1>From design to deployment<span class="h1__soft">&nbsp;— and everything after.</span></h1>
+        <p class="lead">SoftOps is the engineering team behind products in use across the UAE and Pakistan: the apps, the backends, the applied AI and the cloud they run on. We work as the <em>whole engineering function</em> for a small number of ambitious companies, and we own the outcome, not the ticket.</p>
+        <div class="hero__cta">
+          <a class="btn" href="#contact">Start a project <span aria-hidden="true">→</span></a>
+          <a class="btn btn--ghost" href="#work">See the work</a>
+        </div>
+      </div>
+      <div class="hero__art" aria-hidden="true">
+        <canvas id="assemble"></canvas>
+        <svg class="hero__fallback"><use href="#mark"/></svg>
+      </div>
+    </div>
+  </section>
+
+  <!-- Receipts -->
+  <section class="receipts" aria-labelledby="receipts-h">
+    <div class="wrap">
+      <h2 id="receipts-h" class="label"><span class="label__n">00</span>Receipts, not adjectives</h2>
+      <ul class="receipts__grid">
+        <li><b data-count="7000" data-suffix="+">7,000+</b><span>commits shipped on one client platform in its first 14 months</span></li>
+        <li><b>9/9</b><span>live attack payloads blocked at the edge, zero false positives</span></li>
+        <li><b>&lt;8 min</b><span>to rebuild 105 cloud resources from code, with zero drift</span></li>
+        <li><b data-count="28">28</b><span>countries of identity documents read by AI that never touches the internet</span></li>
+        <li><b data-count="8">8</b><span>languages in one consumer app, right-to-left included</span></li>
+        <li><b>180→1</b><span>CI jobs consolidated into a single pipeline, full history kept</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- Work -->
+  <section class="section" id="work" aria-labelledby="work-h">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="work-h" class="label"><span class="label__n">01</span>Selected work</h2>
+        <p class="section__title">Our clients' names stay with them.<br><span class="muted">The engineering speaks for itself.</span></p>
+      </div>
+
+      <div class="cases">
+
+        <details class="case" id="community-super-app">
+          <summary>
+            <span class="case__n">01</span>
+            <span class="case__title">Community super-app<span class="case__where">UAE</span></span>
+            <span class="case__line">A social, live-video and gaming app for the UAE's South Asian workforce — built, run and shipped by one team, from phone to cloud.</span>
+            <span class="case__tags">Consumer social · Live video · Gaming · 8 languages</span>
+            <span class="case__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="case__body">
+            <div class="case__story">
+              <h3>One partner, the whole stack.</h3>
+              <p>The client needed one team that could own everything — app, platform, cloud and releases — and keep shipping every few weeks without seams between them. We are that team.</p>
+              <ul class="built">
+                <li>Flutter app in eight languages, with real-time voice and video inside games and live event rooms</li>
+                <li>12 microservices on an event stream, with a columnar store behind in-app analytics</li>
+                <li>Kubernetes on AWS, provisioned as code and deployed by GitOps across three environments</li>
+                <li>Real-time media on self-hosted servers the client controls</li>
+                <li>Load suites that replay the app's real traffic before every major launch</li>
+                <li>Automated App Store and Google Play publishing; bilingual public site</li>
+                <li>Code-rendered marketing films: one script, three languages, four formats</li>
+              </ul>
+              <p class="stack">Flutter · NestJS · Kafka · PostgreSQL · ClickHouse · LiveKit · Next.js · AWS EKS · Terraform · ArgoCD · k6</p>
+            </div>
+            <dl class="case__nums">
+              <div><dt>7,000+</dt><dd>commits across mobile, backend, admin and infrastructure</dd></div>
+              <div><dt>300+</dt><dd>work items shipped through numbered releases</dd></div>
+              <div><dt>8 + 36</dt><dd>features and fixes in a single release, staged ahead of date</dd></div>
+              <div><dt>0</dt><dd>per-minute vendor bills for live audio and video</dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <details class="case" id="identity-verification">
+          <summary>
+            <span class="case__n">02</span>
+            <span class="case__title">Identity verification, air-gapped<span class="case__where">Regulated operator</span></span>
+            <span class="case__line">Reads passports and IDs across a dozen scripts, matches faces, checks liveness and fraud, and scores a verdict, all without a single call to the internet.</span>
+            <span class="case__tags">RegTech · Applied AI · Computer vision · On-premise</span>
+            <span class="case__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="case__body">
+            <div class="case__story">
+              <h3>AI that never phones home.</h3>
+              <p>An operator processing visa applications needed automated verification in an environment where applicant data is not allowed to leave. So every model runs from disk, and "accuracy" means scored against ground truth, not a demo.</p>
+              <ul class="built">
+                <li>Vision-language OCR for six document types, from passports to bank statements</li>
+                <li>Face matching across ID, passport and selfie, plus 1:N search to catch duplicates</li>
+                <li>Liveness and document-fraud checks feeding a configurable policy engine</li>
+                <li>Human review queues, an encrypted artifact vault, audit log and webhooks</li>
+                <li>Three consoles: configuration, review and applicant capture</li>
+              </ul>
+              <p class="stack">Python · FastAPI · Vision-language models · DeepFace · ONNX · NestJS · PostgreSQL · RabbitMQ · MinIO</p>
+            </div>
+            <dl class="case__nums">
+              <div><dt>16</dt><dd>services, up and healthy from a single command</dd></div>
+              <div><dt>28</dt><dd>countries in the verified ground-truth set</dd></div>
+              <div><dt>1,000</dt><dd>ground-truth cases every change is scored against</dd></div>
+              <div><dt>v1→v17</dt><dd>face-matching releases in seven weeks, 82 tests</dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <details class="case" id="zero-trust">
+          <summary>
+            <span class="case__n">03</span>
+            <span class="case__title">Zero Trust on AWS<span class="case__where">Reference architecture</span></span>
+            <span class="case__line">A lean Zero Trust architecture built entirely as code, then attacked to prove it holds, at about $84 a month.</span>
+            <span class="case__tags">Cloud security · Infrastructure as code · Adversarial validation</span>
+            <span class="case__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="case__body">
+            <div class="case__story">
+              <h3>Proven under attack, not on paper.</h3>
+              <p>Can a smaller organisation afford real Zero Trust? We built a reference architecture to find out, and signed it off on enforcement rather than configuration. The question isn't "does the rule exist?" but "does it hold when something pushes on it?"</p>
+              <ul class="built">
+                <li>Ten infrastructure modules with remote state and locking</li>
+                <li>Three-tier network with no NAT: no internet route from compute or data, at all</li>
+                <li>Every cloud call through nine private endpoints</li>
+                <li>Identity capped by permission boundaries that no admin override can exceed</li>
+                <li>TLS 1.3-only edge with WAF, three encryption domains, locked backups</li>
+              </ul>
+              <p class="stack">AWS · OpenTofu · Fargate · WAF · KMS · GuardDuty · Go</p>
+            </div>
+            <dl class="case__nums">
+              <div><dt>9/9</dt><dd>live attack payloads blocked, zero false positives</dd></div>
+              <div><dt>&lt;8 min</dt><dd>to destroy and rebuild 105 resources; 77/77 tests passing</dd></div>
+              <div><dt>720 ms</dt><dd>p99 under load with every control on, 0% errors</dd></div>
+              <div><dt>~$84</dt><dd>a month to run: Zero Trust at SME budgets</dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <details class="case" id="visa-saas">
+          <summary>
+            <span class="case__n">04</span>
+            <span class="case__title">Visa-processing SaaS<span class="case__where">UAE</span></span>
+            <span class="case__line">Takes travel agencies from passport scan to government approval as one governed workflow, on a ledger built so money can't go missing.</span>
+            <span class="case__tags">B2B SaaS · Multi-tenant · GovTech · FinTech</span>
+            <span class="case__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="case__body">
+            <div class="case__story">
+              <h3>Money you can audit.</h3>
+              <p>Agencies, sub-agencies and agents share one platform, and each sees only its own world. Every application moves real money, so the ledger was designed before the screens.</p>
+              <ul class="built">
+                <li>11 services, with tenant identity stamped at the edge on every request</li>
+                <li>National digital-identity sign-in; documents malware-scanned into isolated storage</li>
+                <li>OCR with transliteration to pre-fill applications</li>
+                <li>Double-entry wallet ledger with exactly one write path</li>
+                <li>Saga-based charging with automatic reversal and a reconciliation sweep every minute</li>
+              </ul>
+              <p class="stack">NestJS · PostgreSQL · BullMQ · OpenTelemetry · Next.js</p>
+            </div>
+            <dl class="case__nums">
+              <div><dt>11</dt><dd>services, delivered in vertical slices from a walking skeleton</dd></div>
+              <div><dt>1</dt><dd>write path for every dirham that moves</dd></div>
+              <div><dt>0</dt><dd>charges without an application, or applications without a charge</dd></div>
+              <div><dt>60 s</dt><dd>between reconciliation sweeps that catch any mismatch</dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <details class="case" id="food-marketplace">
+          <summary>
+            <span class="case__n">05</span>
+            <span class="case__title">Niwaala<span class="case__where">Our product · Pakistan</span></span>
+            <span class="case__line">Our own food marketplace: customers, restaurant partners and riders on three apps that share one architecture, with compliance checked at onboarding, not after.</span>
+            <span class="case__tags">Marketplace · Mobile · Payments · Compliance</span>
+            <span class="case__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="case__body">
+            <div class="case__story">
+              <h3>Three apps, one architecture.</h3>
+              <p>Alongside client work, we build our own products, held to the same standard we ship for clients. A three-sided marketplace is really three products that have to agree on everything. One mobile architecture, one set of rules and one test trail from requirement to release keep them in step.</p>
+              <ul class="built">
+                <li>Customer, restaurant-partner and rider apps on a shared clean architecture</li>
+                <li>Restaurant web portal and operations console</li>
+                <li>11 services, including verification against food- and tax-authority records</li>
+                <li>Payments and a wallet ledger; money held as integer minor units, never floats</li>
+                <li>Spec-first QA with requirement-to-test traceability and production guardrails</li>
+              </ul>
+              <p class="stack">Flutter · Bloc · NestJS · PostgreSQL · Next.js · Playwright · OpenTelemetry</p>
+            </div>
+            <dl class="case__nums">
+              <div><dt>3 + 2</dt><dd>mobile and web apps from one team</dd></div>
+              <div><dt>11</dt><dd>backend services in one monorepo</dd></div>
+              <div><dt>6</dt><dd>onboarding modules specified, traced and tested</dd></div>
+              <div><dt>3</dt><dd>build flavours per app: dev, staging, production</dd></div>
+            </dl>
+          </div>
+        </details>
+
+        <details class="case" id="intelligence-platform">
+          <summary>
+            <span class="case__n">06</span>
+            <span class="case__title">Intelligence platform<span class="case__where">Architecture</span></span>
+            <span class="case__line">Took a branch-per-service estate to one trunk and one pipeline, then designed the architecture that let the product sell to many customers.</span>
+            <span class="case__tags">OSINT · Monorepo migration · Multi-tenancy</span>
+            <span class="case__toggle" aria-hidden="true"></span>
+          </summary>
+          <div class="case__body">
+            <div class="case__story">
+              <h3>Foundations first.</h3>
+              <p>We get hired to fix foundations, not just add features. Here the product worked, but the ground under it made every change slow and every new customer a new installation.</p>
+              <ul class="built">
+                <li>Three repositories merged into one trunk-based monorepo, history preserved</li>
+                <li>~180 CI jobs replaced by one path-filtered pipeline</li>
+                <li>Multi-tenant design isolating identity, data, search and queues per customer</li>
+                <li>Onboarding workflow, billing model and per-tenant cost analysis</li>
+                <li>A single-tenant fleet option for customers who need their own installation</li>
+              </ul>
+              <p class="stack">Python · Elasticsearch · Kubernetes · GitHub Actions · Flutter</p>
+            </div>
+            <dl class="case__nums">
+              <div><dt>180→1</dt><dd>CI jobs to one pipeline, environment drift ended</dd></div>
+              <div><dt>3→1</dt><dd>repositories, with every commit's history intact</dd></div>
+              <div><dt>10k</dt><dd>record ceiling on search results removed</dd></div>
+              <div><dt>1→N</dt><dd>customers the platform can now be sold to</dd></div>
+            </dl>
+          </div>
+        </details>
+
+      </div>
+
+      <div class="also">
+        <h3 class="label label--sm">Also shipped</h3>
+        <ul>
+          <li><b>Wellbeing app</b><span>Daily check-ins become weekly insights. Nothing a user writes ever leaves the platform.</span></li>
+          <li><b>Live audio streaming</b><span>Mosques broadcast sermons live with seven-day replay. Listening needs no sign-up.</span></li>
+          <li><b>Community food-sharing</b><span>Neighbours share home-cooked meals: geo-discovery, requests, ratings, moderation.</span></li>
+          <li><b>AI proposal agent</b><span>Four agents that analyse, score, write and review, so only good-fit work gets a reply.</span></li>
+          <li><b>AI support agent</b><span>Conversational support with memory and authenticated sessions.</span></li>
+          <li><b>Code-rendered film</b><span>One script → three languages × four formats, with word-synced captions and generated music.</span></li>
+          <li><b>Trading infrastructure</b><span>Strategy research, backtesting and deployment for automated trading, as code.</span></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities -->
+  <section class="section section--alt" id="capabilities" aria-labelledby="cap-h">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="cap-h" class="label"><span class="label__n">02</span>Capabilities</h2>
+        <p class="section__title">Your complete software lifecycle,<br><span class="muted">under one roof.</span></p>
+      </div>
+      <ol class="caps">
+        <li>
+          <h3>Product engineering</h3>
+          <p>iOS and Android apps, web apps and the consoles that run the business. Multilingual, right-to-left, real-time audio and video, store releases on autopilot.</p>
+          <p class="stack">Flutter · React Native · Next.js · TypeScript</p>
+        </li>
+        <li>
+          <h3>Platforms &amp; backends</h3>
+          <p>Services that stay simple as they grow: event streams, ledgers, multi-tenancy, analytics. Designed from a written spec, tested against real traffic.</p>
+          <p class="stack">NestJS · Python · Kafka · PostgreSQL · ClickHouse</p>
+        </li>
+        <li>
+          <h3>Applied AI</h3>
+          <p>Document understanding, face and liveness, agents that draft and review their own work. On-premise when the data can't leave. Scored against ground truth, not demos.</p>
+          <p class="stack">Vision-language models · LangGraph · ONNX · FastAPI</p>
+        </li>
+        <li>
+          <h3>Cloud, DevOps &amp; security</h3>
+          <p>Kubernetes, infrastructure as code, GitOps, observability and Zero Trust. Rebuildable from the repository in minutes and proven under attack.</p>
+          <p class="stack">AWS · Terraform · OpenTofu · ArgoCD · Prometheus</p>
+        </li>
+        <li>
+          <h3>Quality &amp; delivery</h3>
+          <p>Load testing, test automation and numbered releases on a live board you can open any time. You always know what ships next, and when.</p>
+          <p class="stack">k6 · JMeter · Playwright · Locust · GitHub Projects</p>
+        </li>
+      </ol>
+      <p class="industries"><span class="label label--sm">Industries</span> FinTech · Blockchain · Artificial intelligence · Health &amp; wellbeing · Social media · Travel &amp; GovTech</p>
+    </div>
+  </section>
+
+  <!-- Method -->
+  <section class="section" id="method" aria-labelledby="method-h">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="method-h" class="label"><span class="label__n">03</span>Method</h2>
+        <p class="section__title">Engineering-first means<br><span class="muted">you can check our work.</span></p>
+      </div>
+      <ol class="principles">
+        <li><h3>We write it down first.</h3><p>Specs and design documents before code. A recent product revamp was specified as six design documents, each mapped to a release, before the first commit.</p></li>
+        <li><h3>You see everything.</h3><p>One live board holds every feature, bug and release, and it's open to you. A release report is a saved filter, not a document someone rebuilds on Friday afternoon.</p></li>
+        <li><h3>We measure before we promise.</h3><p>Load suites replay your app's real traffic before launch. Capacity is a number we've measured, not a hope.</p></li>
+        <li><h3>We prove security.</h3><p>We sign off on enforcement, not configuration. If a control hasn't been pushed on, we don't call it done.</p></li>
+        <li><h3>Everything is code.</h3><p>Infrastructure, deployments, release pipelines, even marketing films. If it can't be rebuilt from the repository, it isn't finished.</p></li>
+        <li><h3>AI in every stage.</h3><p>Our engineers work alongside AI agents in spec, code, test and review, under conventions and guardrails written into every repository. It makes us faster without lowering the bar.</p></li>
+      </ol>
+
+      <div class="first30">
+        <h3 class="label label--sm">Your first 30 days</h3>
+        <ol>
+          <li><span>Week 1</span><p>Talk to the engineers who'll build it. We map the problem, the constraints and the risks.</p></li>
+          <li><span>Week 2</span><p>A written spec and architecture. You approve it before we write production code.</p></li>
+          <li><span>Week 3</span><p>A walking skeleton in staging: every layer connected, end to end.</p></li>
+          <li><span>Week 4</span><p>Your first numbered release, and a cadence you can plan a business around.</p></li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <!-- Company -->
+  <section class="section section--alt" id="company" aria-labelledby="company-h">
+    <div class="wrap">
+      <div class="section__head">
+        <h2 id="company-h" class="label"><span class="label__n">04</span>Company</h2>
+        <p class="section__title">Built by engineers<br><span class="muted">who own the outcome.</span></p>
+      </div>
+      <div class="company">
+        <div class="company__text">
+          <p>We started SoftOps in 2022, in Lahore, to build the engineering company we wanted to work in: people who take ownership, grow together and make decisions together. Clients feel that as <em>ownership beyond delivery</em>. We tell you early what you need to hear, we guide you towards the right solution, and we're still here after launch.</p>
+          <p>Alongside client work we build our own products, starting with <a href="#food-marketplace">Niwaala</a>, a food marketplace for Pakistan. Our goal is to become one of the best engineering companies in the world. We say it out loud so we have to earn it, one system at a time.</p>
+          <blockquote>
+            <p>“We built SoftOps so that engineers here own outcomes, not tickets. Everything else — the standards, the platform, the trust our clients place in us — grows out of that.”</p>
+            <footer>Arbab Khalil, Co-Founder</footer>
+          </blockquote>
+        </div>
+        <ul class="founders">
+          <li>
+            <span class="founders__i" aria-hidden="true">AS</span>
+            <div><b>Ammar Sajid</b><span class="founders__role">Co-Founder &amp; CEO</span><p>Runs the company and its client partnerships.</p></div>
+          </li>
+          <li>
+            <span class="founders__i" aria-hidden="true">MU</span>
+            <div><b>Muhammad Usman</b><span class="founders__role">Co-Founder &amp; CTO</span><p>Builds high-performing teams, delivers complex software and brings modern AI practice into how we build.</p></div>
+          </li>
+          <li>
+            <span class="founders__i" aria-hidden="true">AK</span>
+            <div><b>Arbab Khalil</b><span class="founders__role">Co-Founder &amp; Head of Platform Engineering</span><p>A decade building platforms at scale, from SRE on a global learning platform to in-flight systems in Hamburg. Certified Kubernetes Administrator.</p></div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section class="section contact" id="contact" aria-labelledby="contact-h">
+    <div class="wrap">
+      <h2 id="contact-h" class="contact__title">Have something hard to build?</h2>
+      <p class="lead">Tell us about it. Your first conversation is with an engineer who could build it, not a salesperson.</p>
+
+      <form class="brief" id="brief" action="mailto:info@softopshub.com" method="get" enctype="text/plain">
+        <fieldset>
+          <legend>What do you need?</legend>
+          <div class="chips">
+            <label><input type="checkbox" name="need" value="The whole product"><span>The whole product</span></label>
+            <label><input type="checkbox" name="need" value="Mobile app"><span>Mobile app</span></label>
+            <label><input type="checkbox" name="need" value="Backend / platform"><span>Backend / platform</span></label>
+            <label><input type="checkbox" name="need" value="Applied AI"><span>Applied AI</span></label>
+            <label><input type="checkbox" name="need" value="Cloud / DevOps"><span>Cloud / DevOps</span></label>
+            <label><input type="checkbox" name="need" value="Security review"><span>Security review</span></label>
+            <label><input type="checkbox" name="need" value="Rescue a project"><span>Rescue a project</span></label>
+          </div>
+        </fieldset>
+        <fieldset>
+          <legend>When?</legend>
+          <div class="chips">
+            <label><input type="radio" name="when" value="As soon as possible"><span>As soon as possible</span></label>
+            <label><input type="radio" name="when" value="This quarter"><span>This quarter</span></label>
+            <label><input type="radio" name="when" value="Exploring"><span>Just exploring</span></label>
+          </div>
+        </fieldset>
+        <label class="field">
+          <span>In a sentence or two</span>
+          <textarea name="about" rows="3" placeholder="What you're building, and what's in the way."></textarea>
+        </label>
+        <div class="brief__go">
+          <button class="btn" type="submit">Send the brief <span aria-hidden="true">→</span></button>
+          <p class="muted">Opens your email app with the brief filled in. Or write to <a href="mailto:info@softopshub.com">info@softopshub.com</a>.</p>
+        </div>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="foot">
+  <div class="wrap foot__in">
+    <div class="foot__brand">
+      <svg class="brand__mark" aria-hidden="true"><use href="#mark"/></svg>
+      <div>
+        <b>SoftOps</b>
+        <p class="muted">Marina Tower, Overseas Enclave, Bahria Town, Lahore</p>
+      </div>
+    </div>
+    <nav class="foot__links" aria-label="Footer">
+      <a href="mailto:info@softopshub.com">info@softopshub.com</a>
+      <a href="https://www.linkedin.com/company/softopshub" rel="noopener">LinkedIn</a>
+    </nav>
+    <p class="foot__meta mono">
+      <span id="weight">This page: no framework, no trackers, no cookies.</span>
+      <span>© <span id="year">2026</span> SoftOps</span>
+    </p>
+  </div>
+</footer>
+
+<script src="/assets/js/site.js" defer></script>
+</body>
+</html>
