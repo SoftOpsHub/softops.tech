@@ -451,6 +451,14 @@
           <button class="btn" type="submit">Send the brief <span aria-hidden="true">→</span></button>
           <p class="muted">Opens your email app with the brief filled in. Or write to <a href="mailto:info@softopshub.com">info@softopshub.com</a>.</p>
         </div>
+        <div class="brief__sent" id="brief-sent" role="status" hidden>
+          <p><b>Your brief is ready.</b> <span class="muted">If your email app didn't open, send it another way:</span></p>
+          <div class="brief__alts">
+            <a class="btn btn--ghost btn--sm" id="via-gmail" href="https://mail.google.com/" target="_blank" rel="noopener">Open in Gmail</a>
+            <a class="btn btn--ghost btn--sm" id="via-outlook" href="https://outlook.office.com/mail/" target="_blank" rel="noopener">Open in Outlook</a>
+            <button class="btn btn--ghost btn--sm" id="copy-brief" type="button">Copy brief</button>
+          </div>
+        </div>
       </form>
     </div>
   </section>

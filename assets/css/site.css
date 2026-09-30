@@ -335,6 +335,11 @@ blockquote footer { margin-top: 14px; font: 400 13px/1 var(--mono); color: var(-
 .field textarea:focus { outline: none; border-color: var(--text); }
 .brief__go { display: flex; flex-wrap: wrap; align-items: center; gap: 16px 24px; }
 .brief__go p { font-size: 14px; }
+.brief__sent { padding: 20px 22px; border: 1px solid var(--line-strong); border-left: 2px solid var(--accent); border-radius: 12px; background: var(--surface); }
+.brief__sent[hidden] { display: none; }
+.brief__sent p { font-size: 15px; }
+.brief__sent b { font-weight: 500; }
+.brief__alts { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 
 /* ---------- Footer ---------- */
 .foot { border-top: 1px solid var(--line); padding: 40px 0 48px; }

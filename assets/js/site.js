@@ -47,16 +47,23 @@
     });
   });
 
-  /* ---------- Brief → pre-filled email ---------- */
+  /* ---------- Brief → pre-filled email ----------
+     mailto: only works when the visitor has a mail app registered, and many webmail users don't,
+     so the click can silently do nothing. We still try it, then always offer Gmail, Outlook and a
+     copyable brief as a fallback. */
   var brief = document.getElementById("brief");
   if (brief) {
+    var sent = document.getElementById("brief-sent");
+    var copyBtn = document.getElementById("copy-brief");
+    var current = null;
+
     brief.addEventListener("submit", function (ev) {
       ev.preventDefault();
       var fd = new FormData(brief);
       var needs = fd.getAll("need");
       var when = fd.get("when");
       var about = (fd.get("about") || "").toString().trim();
-      var lines = [
+      var body = [
         "Hello SoftOps,",
         "",
         "What we need: " + (needs.length ? needs.join(", ") : "(not sure yet)"),
@@ -65,10 +72,35 @@
         about || "A little about what we're building:",
         "",
         "—"
-      ];
+      ].join("\n");
       var subject = "Project brief" + (needs.length ? ": " + needs.slice(0, 2).join(" + ") : "");
       var to = brief.getAttribute("action").replace(/^mailto:/, "");
-      location.href = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(lines.join("\n"));
+      var q = encodeURIComponent;
+      current = { to: to, subject: subject, body: body };
+
+      document.getElementById("via-gmail").href =
+        "https://mail.google.com/mail/?view=cm&fs=1&to=" + q(to) + "&su=" + q(subject) + "&body=" + q(body);
+      document.getElementById("via-outlook").href =
+        "https://outlook.office.com/mail/deeplink/compose?to=" + q(to) + "&subject=" + q(subject) + "&body=" + q(body);
+      copyBtn.textContent = "Copy brief";
+      sent.hidden = false;
+
+      location.href = "mailto:" + to + "?subject=" + q(subject) + "&body=" + q(body);
+    });
+
+    copyBtn.addEventListener("click", function () {
+      if (!current) return;
+      var text = "To: " + current.to + "\nSubject: " + current.subject + "\n\n" + current.body;
+      function done() { copyBtn.textContent = "Copied — paste it into an email to " + current.to; }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text; ta.setAttribute("readonly", ""); ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta); ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) { copyBtn.textContent = "Copy failed — email " + current.to; }
+        document.body.removeChild(ta);
+      }
+      if (navigator.clipboard && window.isSecureContext) navigator.clipboard.writeText(text).then(done, fallback);
+      else fallback();
     });
   }
 
