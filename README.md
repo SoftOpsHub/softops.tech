@@ -37,10 +37,20 @@ Use a local server rather than opening the file directly: asset paths are root-r
 - **Pull requests to `main`**: run `scripts/check.mjs`. Nothing is deployed.
 - **Push to `main`**: the same checks, then deploy to GitHub Pages and smoke-test the live URLs.
 
-One-time setup: *Settings → Pages → Source: GitHub Actions*, custom domain `softops.tech`,
-*Enforce HTTPS* on. At the DNS provider, point the apex at GitHub Pages (A records
-`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`) and `www` as a CNAME to
-`softopshub.github.io`.
+Pages is configured with *Source: GitHub Actions* and custom domain `softops.tech` (the `CNAME`
+file keeps it set). DNS is on Cloudflare:
+
+| Type | Name | Content | Proxy |
+|---|---|---|---|
+| A | `@` | `185.199.108.153` | Proxied |
+| A | `@` | `185.199.109.153` | Proxied |
+| A | `@` | `185.199.110.153` | Proxied |
+| A | `@` | `185.199.111.153` | Proxied |
+| CNAME | `www` | `softopshub.github.io` | Proxied |
+| TXT | `_github-pages-challenge-SoftOpsHub` | *value from GitHub org settings → Pages → Verified domains* | DNS only |
+
+With the Cloudflare proxy on, GitHub cannot issue its own certificate, so HTTPS is handled at
+Cloudflare: *SSL/TLS → Full*, and *Edge Certificates → Always Use HTTPS* on.
 
 ## Editing content
 

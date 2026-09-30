@@ -47,10 +47,15 @@ jobs:
       - id: deployment
         uses: actions/deploy-pages@v4
       - name: Smoke-test the live site
+        # Pages and the Cloudflare edge take a little while to serve a new deploy, so retry
+        # each URL for up to ~3 minutes before calling it a failure.
         run: |
-          sleep 20
           for path in / /assets/css/site.css /assets/js/site.js /assets/img/og.png; do
-            code=$(curl -s -o /dev/null -w '%{http_code}' "https://softops.tech$path")
-            echo "$path → $code"
+            for attempt in $(seq 1 18); do
+              code=$(curl -s -o /dev/null -w '%{http_code}' "https://softops.tech$path?deploy=$GITHUB_SHA")
+              [ "$code" = "200" ] && break
+              sleep 10
+            done
+            echo "$path → $code (attempt $attempt)"
             [ "$code" = "200" ] || exit 1
           done
