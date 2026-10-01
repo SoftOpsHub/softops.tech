@@ -100,9 +100,9 @@
         <li><b data-count="7000" data-suffix="+">7,000+</b><span>commits shipped on one client platform in its first 14 months</span></li>
         <li><b>9/9</b><span>live attack payloads blocked at the edge, zero false positives</span></li>
         <li><b>&lt;8 min</b><span>to rebuild 105 cloud resources from code, with zero drift</span></li>
-        <li><b data-count="28">28</b><span>countries of identity documents read by AI that never touches the internet</span></li>
+        <li><b data-count="150">150</b><span>nationalities of identity documents verified by AI that never touches the internet</span></li>
         <li><b data-count="8">8</b><span>languages in one consumer app, right-to-left included</span></li>
-        <li><b>180→1</b><span>CI jobs consolidated into a single pipeline, full history kept</span></li>
+        <li><b>300+</b><span>work items shipped through numbered releases on a single client platform</span></li>
       </ul>
     </div>
   </section>
@@ -172,7 +172,7 @@
             </div>
             <dl class="case__nums">
               <div><dt>16</dt><dd>services, up and healthy from a single command</dd></div>
-              <div><dt>28</dt><dd>countries in the verified ground-truth set</dd></div>
+              <div><dt>150</dt><dd>nationalities whose identity documents the platform verifies</dd></div>
               <div><dt>1,000</dt><dd>ground-truth cases every change is scored against</dd></div>
               <div><dt>v1→v17</dt><dd>face-matching releases in seven weeks, 82 tests</dd></div>
             </dl>
@@ -265,36 +265,6 @@
               <div><dt>11</dt><dd>backend services in one monorepo</dd></div>
               <div><dt>6</dt><dd>onboarding modules specified, traced and tested</dd></div>
               <div><dt>3</dt><dd>build flavours per app: dev, staging, production</dd></div>
-            </dl>
-          </div>
-        </details>
-
-        <details class="case" id="intelligence-platform">
-          <summary>
-            <span class="case__n">06</span>
-            <span class="case__title">Intelligence platform<span class="case__where">Architecture</span></span>
-            <span class="case__line">Took a branch-per-service estate to one trunk and one pipeline, then designed the architecture that let the product sell to many customers.</span>
-            <span class="case__tags">OSINT · Monorepo migration · Multi-tenancy</span>
-            <span class="case__toggle" aria-hidden="true"></span>
-          </summary>
-          <div class="case__body">
-            <div class="case__story">
-              <h3>Foundations first.</h3>
-              <p>We get hired to fix foundations, not just add features. Here the product worked, but the ground under it made every change slow and every new customer a new installation.</p>
-              <ul class="built">
-                <li>Three repositories merged into one trunk-based monorepo, history preserved</li>
-                <li>~180 CI jobs replaced by one path-filtered pipeline</li>
-                <li>Multi-tenant design isolating identity, data, search and queues per customer</li>
-                <li>Onboarding workflow, billing model and per-tenant cost analysis</li>
-                <li>A single-tenant fleet option for customers who need their own installation</li>
-              </ul>
-              <p class="stack">Python · Elasticsearch · Kubernetes · GitHub Actions · Flutter</p>
-            </div>
-            <dl class="case__nums">
-              <div><dt>180→1</dt><dd>CI jobs to one pipeline, environment drift ended</dd></div>
-              <div><dt>3→1</dt><dd>repositories, with every commit's history intact</dd></div>
-              <div><dt>10k</dt><dd>record ceiling on search results removed</dd></div>
-              <div><dt>1→N</dt><dd>customers the platform can now be sold to</dd></div>
             </dl>
           </div>
         </details>
